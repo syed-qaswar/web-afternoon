@@ -4,8 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- internal css -->
+    <style>
+        /* element selector */
+        /* h1{
+            color: blue;
+            text-decoration: underline yellow wavy;
+            text-align: center;
+            font-size: 60px;
+        } */
+        /* p{
+            color: red;
+        } */
+
+        /* class selector */
+        .page-title{
+            color: blue;
+            text-decoration: underline yellow wavy;
+            text-align: center;
+            font-size: 60px;
+        }
+        .h2{
+            text-decoration: underline;
+            font-size: 30;
+        }
+        .input-box input{
+            border: none;
+            border-bottom: 2px solid red;
+            outline: none;
+        }
+        /* .input-box label{
+            color: red;
+        } */
+        .input-box label span{
+            color: red;
+            font-size: 15px;
+        }
+        .time-table, .time-table td, .time-table th{
+            border: 1px solid;
+        }
+        /* .time-table td{border: 1px solid;}
+        .time-table th{border: 1px solid;} */
+    </style>
 </head>
 <body>
+    <h1 class="page-title">Welcome to web development class</h1>
+    <p>this is our fifth class</p>
+
+    <h1>Pakistan</h1>
+    <h2 class="h2">Provinces</h2>
+    <h2 class="h2">Population</h2>
+
+    <form>
+        <div class="input-box">
+            <label for="">
+                Name<span>*</span>:
+                <input type="text" required>
+            </label>
+        </div>
+    </form>
+
+    <p>Pakistan is our <span>homeland</span></p>
+
+    <table class="time-table">
+        <tr>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+        </tr>
+        <tr>
+            <td>1:00pm</td>
+            <td>1:30pm</td>
+            <td>2:00pm</td>
+        </tr>
+    </table>
+
+
     
 </body>
 </html>
