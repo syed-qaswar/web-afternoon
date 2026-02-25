@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Inline-block | Float</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            margin: 10px;
+            border: 2px solid red;
+            padding: 5px;
+            /* box-sizing: border-box; */
+            display: inline-block;
+        }
+
+        .text-box{
+            background-color: chocolate;
+            padding: 10px;
+        }
+        .text-box h2{
+            margin-bottom: 10px;
+        }
+
+        .img-with-text{
+            background-color: gainsboro;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <!-- box model: margin - border - padding - actual content -->
+    
+    <!-- <div class="text-box">
+        <h2>Welcome to Web development</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ab hic nostrum voluptatibus deleniti delectus maxime maiores. Consectetur necessitatibus fugiat ullam, nihil id natus corporis possimus beatae modi magnam dolor.</p>
+        <button type="button">Click here</button>
+    </div> -->
+
+    <section class="img-with-text">
+        <div class="text">
+            <h1>Image with Text</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi porro, voluptates illum ut illo libero dolor corrupti fugiat nostrum totam dolores expedita vero tenetur saepe alias? Assumenda voluptate in tempora!</p>
+        </div>
+        <div class="img">
+            <img src="../images/HTML-Understanding-Featured.avif" alt="">
+        </div>
+    </section>
+
+
+</body>
+</html>
