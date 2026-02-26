@@ -9,20 +9,21 @@
             margin: 0;
             box-sizing: border-box;
         }
-        .box{
+        /* .box{
             width: 200px;
             height: 200px;
             background-color: aquamarine;
             margin: 10px;
             border: 2px solid red;
             padding: 5px;
-            /* box-sizing: border-box; */
+            box-sizing: border-box;
             display: inline-block;
-        }
+        } */
 
-        .text-box{
+        /* .text-box{
             background-color: chocolate;
             padding: 10px;
+            width: 400px;
         }
         .text-box h2{
             margin-bottom: 10px;
@@ -31,6 +32,15 @@
         .img-with-text{
             background-color: gainsboro;
             padding: 10px;
+        } */
+        .text-box, .img-box{display: inline-block;}
+        .text-box{
+            background-color: chocolate;
+            width: 48%;
+        }
+        .img-box{width: 50%;}
+        .img-box img{
+            width: 48%;
         }
     </style>
 </head>
@@ -48,11 +58,11 @@
     </div> -->
 
     <section class="img-with-text">
-        <div class="text">
+        <div class="text-box">
             <h1>Image with Text</h1>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi porro, voluptates illum ut illo libero dolor corrupti fugiat nostrum totam dolores expedita vero tenetur saepe alias? Assumenda voluptate in tempora!</p>
         </div>
-        <div class="img">
+        <div class="img-box">
             <img src="../images/HTML-Understanding-Featured.avif" alt="">
         </div>
     </section>
