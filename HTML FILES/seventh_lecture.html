@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float</title>
+    <style>
+        .floating-img{
+            width: 500px;
+            float: right;
+        }
+        .text{
+            font-size: 40px;
+        }
+
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+            /* display: inline-block; */
+            float: left;
+        }
+
+        .div-after-float{clear: both;}
+    </style>
+</head>
+<body>
+    <div>
+        <img src="../images/HTML-Understanding-Featured.avif" alt="" class="floating-img">
+        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum laudantium illum eum fugit dignissimos temporibus, blanditiis sequi nam voluptates, incidunt officia excepturi consequatur a esse, suscipit earum dolorum tempore autem? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias itaque laboriosam laudantium consectetur fugiat rem maxime. Maiores officiis esse pariatur error, deleniti illo libero, quidem animi, perspiciatis eveniet ea delectus!</p>
+    </div>
+
+    <!-- three boxes in a single line using float -->
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <div class="div-after-float">
+        <h1>Just a div</h1>
+    </div>
+
+</body>
+</html>
+
