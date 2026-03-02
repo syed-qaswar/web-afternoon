@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .absolute{
+            border: 2px solid red;
+            position: relative;
+            width: 700px;
+        }
+        .absolute div{
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+            display: inline-block;
+        }
+        .absolute .box2{
+            background-color: purple;
+            position: absolute;
+            top: 100px;
+            right: 0px;
+        }
+
+        /* relative */
+        .relative{
+            margin-top: 20px;
+            border: 2px solid red;
+            position: relative;
+        }
+        .relative div{
+            width: 300px;
+            height: 300px;
+            background-color: rgb(0, 21, 255);
+            display: inline-block;
+        }
+        .relative .box1{
+            position: relative;
+            background-color: darkgoldenrod;
+            z-index: 3;
+
+        }
+        .relative .box2{
+            background-color: brown;
+            position: relative;
+            top: 100px;
+            right: 200px;
+            z-index: 2;
+        }
+        .relative .box3{
+            position: relative;
+            right: 400px;
+            bottom: 50px;
+        }
+
+        .heading{
+            position: absolute;
+            /* top: 100px; */
+            /* top: 0px; */
+        }
+
+        /* fixed */
+        .fixed{
+            width: 200px;
+            height: 200px;
+            background-color: orangered;
+            position: fixed;
+            top: 0px;
+            left: 300px;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- position absolute -->
+
+    <div class="absolute">
+        <h1>Absolute Position</h1>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+
+    <!-- position fixed -->
+    <div class="relative">
+        <h1>Relative Position</h1>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+    <h1 class="heading">Another element with position relative</h1>
+
+    <!-- position fixed  -->
+    <div class="fixed">
+        this is fixed
+    </div>
+
+</body>
+</html>

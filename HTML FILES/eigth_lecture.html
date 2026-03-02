@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            background-color: transparent;
+            border: none;
+            border: 2px solid rgb(68, 68, 239);
+            border-radius: 5px;
+            padding: 5px 7px;
+            transition: color 1s ease, border 2s;
+            /* transition: 2s; */
+        }
+        .btn:hover{
+            background-color: rgb(68, 68, 239);
+            border: 2px solid orangered;
+            color: white;
+        }
+        a{transition: color 2s;}
+        a:link{
+            color: brown;
+        }
+        a:visited{
+            color: chartreuse;
+        }
+        a:active{
+            color: violet;
+        }
+        a:hover{}
+
+        /* input with focused */
+        .input-field{
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .input-field:focus{
+            outline: none;
+            border: 2px solid rgb(65, 65, 251);
+            box-shadow: 0px 0px 5px 3px rgba(65, 65, 251, 0.605);
+        }
+
+        /* box shadow */
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            /* box-shadow: 0px 0px 5px 5px rgba(255, 68, 0, 0.687); */
+            margin-left: 50px;
+        }
+        .box:hover{
+            box-shadow: 0px 0px 5px 5px rgba(255, 68, 0, 0.687);
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Pseudo Classes :hover, :link, :visited -->
+    
+    <!-- a button with hover -->
+    <button class="btn">Hover here</button>
+
+    <!-- link with pseudo classes -->
+    <a href="index.html" >Home</a>
+    <a href="services.html" >Services</a>
+    <a href="contact.html" >Contact</a>
+
+    <!-- input field with a pseudo class -->
+    <input type="text" class="input-field">
+
+    <!-- box-shadow with a div -->
+    <div class="box"></div>
+</body>
+</html>
