@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         .absolute{
             border: 2px solid red;
             position: relative;
@@ -66,36 +71,91 @@
             height: 200px;
             background-color: orangered;
             position: fixed;
-            top: 0px;
+            top: 100px;
             left: 300px;
             color: white;
         }
 
+        /* topbar */
+        .topbar{
+            background-color: rgb(35, 35, 219);
+            color: white;
+            padding: 10px;
+        }
+        /* navbar */
+        .navbar{
+            background-color: black;
+            color: white;
+            padding: 10px 15px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            width: 100%;
+        }
+        .navbar h1{display: inline-block;}
+        .navbar nav{
+            display: inline-block;
+            margin-left: 50px;
+        }
+        nav a{
+            text-decoration: none;
+            color: white;
+            margin: 0px 10px;
+        }
+        .navbar .btn{
+            background-color: chocolate;
+            color: white;
+            text-decoration: none;
+            padding: 10px 12px;
+            border-radius: 5px;
+            float: right;
+        }
+
+        main{
+            margin-top: 70px;
+        }
     </style>
 </head>
 <body>
-    <!-- position absolute -->
-
-    <div class="absolute">
-        <h1>Absolute Position</h1>
-        <div class="box1"></div>
-        <div class="box2"></div>
-        <div class="box3"></div>
+    <header>
+        <div class="topbar">
+            This is a top bar
+        </div>
+    </header>
+    <!-- navbar  -->
+    <div class="navbar">
+            <h1>Our Webpage</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </nav>
+        <a href="" class="btn">Get in touch</a>
     </div>
+    <main>
+        <!-- position absolute -->
+        <div class="absolute">
+            <h1>Absolute Position</h1>
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+        </div>
 
-    <!-- position fixed -->
-    <div class="relative">
-        <h1>Relative Position</h1>
-        <div class="box1"></div>
-        <div class="box2"></div>
-        <div class="box3"></div>
-    </div>
-    <h1 class="heading">Another element with position relative</h1>
+        <!-- position fixed -->
+        <div class="relative">
+            <h1>Relative Position</h1>
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+        </div>
+        <h1 class="heading">Another element with position relative</h1>
 
-    <!-- position fixed  -->
-    <div class="fixed">
-        this is fixed
-    </div>
+        <!-- position fixed  -->
+        <div class="fixed">
+            this is fixed
+        </div>
+    </main>
 
 </body>
 </html>
