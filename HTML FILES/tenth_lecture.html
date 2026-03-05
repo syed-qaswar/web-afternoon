@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS selector and CSS Flexbox</title>
+    <style>
+        /* element selector */
+        p{color: blue;}
+
+        /* class selector */
+        .text{font-size: 40px;}
+
+        /* group selector */
+        h1, p{text-decoration: underline;}
+
+        /* descendant selector */
+        .box p{font-weight: bold;}
+
+        /* child selector */
+        .box > p{color: orange;}
+
+        /* attribute selector */
+        input[type='text']{
+            padding: 5px;
+            border: 2px solid blue;
+        }
+
+        a[href*='google']{
+            text-decoration: none;
+            color: brown;
+        }
+        a[href^='https']{
+            color: blueviolet;
+            font-weight: bold;
+        }
+        img[src$='.png']{}
+
+        /* CSS flex */
+        .container{
+            border: 2px solid red;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0px 5px;
+                
+        }
+        .container div{
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>CSS selectors</h1>
+        <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo fugit ullam distinctio voluptas repellendus. Dolor quisquam voluptates officiis consequatur, ullam ipsa sapiente? Facilis, numquam sed! Distinctio quibusdam voluptatibus perferendis assumenda?</p>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </div>
+
+    <input type="email" placeholder="email..">
+    <input type="text" placeholder="name..">
+
+    <a href="www.google.com">Google</a>
+    <a href="www.facebook.com">facebook</a>
+    <a href="https://www.wikipedia.org">Wikipedia</a>
+
+    <!-- CSS flex: A CSS module to create interactive layouts -->
+    <!-- CSS Flex is one dimensional -->
+    <!-- Flex container, Flex items -->
+
+    <!-- flex container -->
+    <div class="container">
+        <!-- flex items -->
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
