@@ -3,13 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    /* hex code, rgb */
+    --primary-color: rgb(239, 125, 25);
+}
 .navbar{
-    background-color: black;
+    background-color: var(--primary-color);
     color: white;
     padding: 10px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    /* justify-content: space-between; */
     align-items: center;
+    gap: 7px 0px;
 }
 
 .nav-menu a{
@@ -42,4 +48,37 @@
 .content div{
     background-color: cadetblue;
     padding: 10px;
+}
+
+/* image with text */
+.img-with-txt{
+    background-color: rgb(133, 185, 231);
+    padding: 10px 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* height: 400px; */
+}
+
+.txt-box, .img-box{width: 45%;}
+
+.img-box img{width: 100%;}
+
+/* services */
+.services{
+    padding: 10px 5px;
+}
+.service-cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+.services h1, .services p{
+    margin: 10px 0px;
+}
+.service-cards .card{
+    background-color: gainsboro;
+    padding: 15px 10px;
+    border: 2px solid rgba(228, 99, 24, 0.801);
+    text-align: center;
 }
