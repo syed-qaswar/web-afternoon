@@ -72,6 +72,7 @@
     padding: 10px 5px;
     margin-bottom: 10px;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
     /* height: 400px; */
@@ -81,8 +82,8 @@
 
 .img-box img{width: 100%;}
 
-.txt-box{order: 2}
-.img-box{order: 1}
+/* .txt-box{order: 2}
+.img-box{order: 1} */
 
 /* services */
 .services{
@@ -100,4 +101,61 @@
     padding: 15px 10px;
     border: 2px solid rgba(228, 99, 24, 0.801);
     text-align: center;
+}
+
+/* CSS Grid */
+.grid-section{
+    background-color: coral;
+    height: 500px;
+    padding: 20px 10px;
+}
+.grid-container{
+    display: grid;
+    height: 400px;
+    grid-template-columns: 200px 300px 400px;
+    /* grid-template-columns: 100px repeat(2, 1fr); */
+    /* grid-template-areas: 'item1 item1 item1' 
+    'item2 item3 item4'
+    'item5 item3 item6'; */
+    
+    grid-template-rows: 100px 100px ;
+    /* aligns the grid horizontaly inside its container */
+    justify-content: center;
+    /* aligns the items horizontaly inside the cell */
+    /* justify-items: center; */
+    /* aligns the grid verticaly inside its container  */
+    align-content: center;
+    /* aligns the items verticaly inside the cell */
+    /* align-items: start; */
+    gap: 5px 7px;
+}
+.grid-container .items{
+    background-color: cadetblue;
+    padding: 10px;
+}
+.item1{
+    /* grid-column: 2 / 3;
+    grid-row: 1 / 3; */
+    /* grid-area: item1; */
+}
+/* .item2{grid-area: item2;}
+.item3{grid-area: item3;}
+.item4{grid-area: item4;}
+.item5{grid-area: item5;}
+.item6{grid-area: item6;} */
+
+
+/* Media Queries */
+@media(max-width:768px){
+    .grid-section{background-color: blueviolet;}
+    .grid-container{
+        grid-template-columns: 1fr 1fr;
+        /* grid-template-areas: 'item1 item1'
+        'item2 item3'
+        'item4 item4'
+        'item5 item6'; */
+    }
+    .img-with-txt{flex-direction: column;}
+    .img-box{order: 1}
+    .txt-box{order: 2;}
 }
