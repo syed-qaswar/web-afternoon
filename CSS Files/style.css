@@ -6,7 +6,12 @@
 :root{
     /* hex code, rgb */
     --primary-color: rgb(239, 125, 25);
+
+    --bs-body-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+/* body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */
 .navbar{
     background-color: var(--primary-color);
     color: white;
@@ -106,12 +111,11 @@
 /* CSS Grid */
 .grid-section{
     background-color: coral;
-    height: 500px;
+    height: 100vh;
     padding: 20px 10px;
 }
 .grid-container{
     display: grid;
-    height: 400px;
     grid-template-columns: 200px 300px 400px;
     /* grid-template-columns: 100px repeat(2, 1fr); */
     /* grid-template-areas: 'item1 item1 item1' 
@@ -146,16 +150,29 @@
 
 
 /* Media Queries */
-@media(max-width:768px){
+/* @media(max-width:768px){
     .grid-section{background-color: blueviolet;}
     .grid-container{
         grid-template-columns: 1fr 1fr;
-        /* grid-template-areas: 'item1 item1'
+        grid-template-areas: 'item1 item1'
         'item2 item3'
         'item4 item4'
-        'item5 item6'; */
+        'item5 item6';
     }
     .img-with-txt{flex-direction: column;}
     .img-box{order: 1}
     .txt-box{order: 2;}
+} */
+
+@media(max-width: 992px){
+    .grid-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 100px 100px;
+    }
+}
+
+@media(max-width: 600px){
+    .grid-container{
+        grid-template-columns: 1fr;
+    }
 }
