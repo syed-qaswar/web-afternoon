@@ -35,7 +35,7 @@ greet('Ammar') //argument
 // HTML DOM
 
 // adding some text
-document.getElementById('text').innerText = 'Hello JavaScript'
+// document.getElementById('text').innerText = 'Hello JavaScript'
 // document.querySelector('#text')
 
 // working with styles
@@ -43,15 +43,28 @@ function changeColor(){
     document.getElementById('text').style.color = 'blue'
 }
 
-let btn = document.getElementById('btn')
+// let btn = document.getElementById('btn')
 // using a named function
-btn.addEventListener('click', changeColor)
+// btn.addEventListener('click', changeColor)
 
-// using an anonymous function
-btn.addEventListener('click', function(){
-    document.getElementById('text').style.color = 'blue'
-})
+// // using an anonymous function
+// btn.addEventListener('click', function(){
+//     document.getElementById('text').style.color = 'blue'
+// })
 
 // local vs global variables
 
+let text = document.getElementById('text')
+let input = document.getElementById('input')
+let btn = document.getElementById('btn')
+let digits = input.length
 
+
+btn.addEventListener('click', function(){
+    // console.log(digits)
+    if(digits >= 5){
+        text.innerText = input.value
+    }else{
+        text.innerText = 'Number of Characters should be 5 or more than 5'
+    }
+})
