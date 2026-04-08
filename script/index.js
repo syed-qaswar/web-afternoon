@@ -3,29 +3,29 @@
 
 
 // variables
-let name = 'Adil' //strings
-let age = 20 //integer
-let city = 'Lahore' //strings
-const cnic = '123-1234-123'
-let result = 99.5 //float
+// let name = 'Adil' //strings
+// let age = 20 //integer
+// let city = 'Lahore' //strings
+// const cnic = '123-1234-123'
+// let result = 99.5 //float
 // let cnic = 12
 
 // output
-console.log(name)
-console.log(age)
-console.log(city)
+// console.log(name)
+// console.log(age)
+// console.log(city)
 
 // functions (pre-defined / user-defined)
 
 // defining a function
-function greet(name){ //parameter
-    // function block
-    // console.log('Hello, Guest')
-    console.log('Hello,' + name)
-}
-// calling a function
-// greet()
-greet('Ammar') //argument
+// function greet(name){ //parameter
+//     // function block
+//     // console.log('Hello, Guest')
+//     console.log('Hello,' + name)
+// }
+// // calling a function
+// // greet()
+// greet('Ammar') //argument
 
 
 //task: a function that takes 2 integers and display their sum
@@ -39,9 +39,9 @@ greet('Ammar') //argument
 // document.querySelector('#text')
 
 // working with styles
-function changeColor(){
-    document.getElementById('text').style.color = 'blue'
-}
+// function changeColor(){
+//     document.getElementById('text').style.color = 'blue'
+// }
 
 // let btn = document.getElementById('btn')
 // using a named function
@@ -54,17 +54,110 @@ function changeColor(){
 
 // local vs global variables
 
-let text = document.getElementById('text')
-let input = document.getElementById('input')
-let btn = document.getElementById('btn')
-let digits = input.length
+// let text = document.getElementById('text')
+// let input = document.getElementById('input')
+// let btn = document.getElementById('btn')
+// let digits = input.length
 
 
-btn.addEventListener('click', function(){
-    // console.log(digits)
-    if(digits >= 5){
-        text.innerText = input.value
-    }else{
-        text.innerText = 'Number of Characters should be 5 or more than 5'
-    }
-})
+// btn.addEventListener('click', function(){
+//     // console.log(digits)
+//     if(digits >= 5){
+//         text.innerText = input.value
+//     }else{
+//         text.innerText = 'Number of Characters should be 5 or more than 5'
+//     }
+// })
+
+
+// arrow functions (anonymous , inline functions)
+// 1. regular function syntax
+// function greet(name){
+//     console.log('Hello, ' + name)
+// }
+// greet('Ammar')
+
+// arrow function syntax
+// let greet = (name) =>{
+//     console.log('Hello' + name)
+// }
+// greet('Ahmed')
+
+// inline syntax
+// let greet = (name) => console.log('Hello ' + name)
+// greet('Ahmed')
+
+// let add = (x , y) => console.log(a + b)
+// add()
+
+// arrow function for event listener
+
+// btn.addEventListener('click', () => {
+//     // console.log(digits)
+//     if(digits >= 5){
+//         text.innerText = input.value
+//     }else{
+//         text.innerText = 'Number of Characters should be 5 or more than 5'
+//     }
+// })
+
+// Arrays
+let cities = ['Lahore', 'Karachi', 'Quetta']
+console.log(cities)
+
+// accessing the items within the array
+console.log(cities[1])
+let city = cities[0]
+console.log(city)
+
+// useful properties and methods
+console.log(cities.length)
+cities.push('Islamabad')
+// cities[2] = 'xyz'  // overwrites the value
+let val = cities.pop() //removes adn returns the item
+console.log(val)
+console.log(cities)
+
+// loops
+for(let i = 0; i <= 10; i++){
+    console.log(i)
+}
+// 2 x 1 = 2
+// 2 x 2 = 4
+
+for(let i = 1; i <= 10; i++){
+    let result = 2 * i
+    console.log(2 + 'x' + i + '=' + result)
+}
+
+
+// loop with an array (iterating over an array)
+let students = ['Ammar', 'Adil', 'Uzair', 'Tayyab']
+// let arraySize = students.length
+// for(let i = 0; i < arraySize; i++){
+//     console.log(students[i])
+// }
+
+// ierating over an array using forEach (call-back function)
+// students.forEach((student) => console.log(student)); 
+
+// 1st iteration -> ('Ammar') => -> prints Ammar
+// 2nd iteration -> ('Adil') => -> prints Adil
+
+
+// function x() //not accepting values
+// function y(a) //accepting values 
+
+
+// list with forEach
+let list = document.querySelector('#list')
+
+students.forEach((student) =>{
+    // list.innerHTML += "<li>" + student + "</li>"
+    list.innerHTML += `<li> ${student} </li>`
+});
+
+// REACTJS: Library to create User interfaces
+// Uses Components
+
+// Navbar, Cards
