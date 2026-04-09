@@ -150,14 +150,59 @@ let students = ['Ammar', 'Adil', 'Uzair', 'Tayyab']
 
 
 // list with forEach
-let list = document.querySelector('#list')
+// let list = document.querySelector('#list')
 
-students.forEach((student) =>{
-    // list.innerHTML += "<li>" + student + "</li>"
-    list.innerHTML += `<li> ${student} </li>`
-});
+// students.forEach((student) =>{
+//     // list.innerHTML += "<li>" + student + "</li>"
+//     list.innerHTML += `<li> ${student} </li>`
+// });
 
 // REACTJS: Library to create User interfaces
 // Uses Components
 
 // Navbar, Cards
+let add_task = document.getElementById('task-btn')
+function todoList(){
+    let task_input = document.getElementById('task-input')
+    let task_value = task_input.value.trim()
+
+    // checking the value
+    if(task_input == ""){
+        alert('Write something!!')
+    }
+
+    // creating li elements
+    let li = document.createElement('li')
+    li.className = "flex justify-between bg-blue-200 rounded-md p-2 my-1"
+
+    // add task text
+    let span = document.createElement('span')
+    span.innerText = task_value
+    span.className = 'cursor-pointer'
+
+    // complete task
+    span.addEventListener('click', () => {
+        span.classList.toggle('line-through')
+        span.classList.toggle('text-gray-200')
+    })
+
+    // adding delete button
+    let del = document.createElement('button')
+    del.innerText = 'Delete Task'
+    del.className = 'bg-red-500 text-white px-2 py-1 rounded-md'
+
+    // deleting a task
+    del.onclick = function(){
+        li.remove()
+    }
+    // del.addEventListener('click', () =>{
+    //     li.remove()
+    // })
+
+    li.appendChild(span)
+    li.appendChild(del)
+    document.querySelector('.task-list').appendChild(li)
+}
+
+add_task.addEventListener('click', todoList)
+

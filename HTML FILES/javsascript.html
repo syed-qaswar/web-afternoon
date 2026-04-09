@@ -4,17 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
     <!-- <h1 id="text"></h1>
     <button id="btn">Change Color</button> -->
 
-    <p id="text"></p>
+    <!-- changing text with input -->
+    <!-- <p id="text"></p>
     <input type="text" id="input">
-    <button id="btn">Click here</button>
+    <button id="btn">Click here</button> -->
 
     <!-- list with foreach -->
-    <ul id="list"></ul>
+    <!-- <ul id="list"></ul> -->
+
+    <!-- To-do List with js and tailwind css -->
+    <div class="h-screen flex flex-col justify-center items-center p-2">
+        <h1 class="font-semibold">To-do List with HTML, Tailwind and JS</h1>
+
+        <div class="my-2">
+            <input 
+            type="text"
+            id="task-input"
+            placeholder="Enter a new task.."
+            class="border border-blue-500 rounded-md p-1">
+            <button 
+            type="button" 
+            id="task-btn"
+            class="bg-amber-300 px-3 py-1 rounded-lg border border-black">
+                Add Task
+            </button>
+        </div>
+
+        <!-- list for tasks -->
+        <ol class="task-list w-full"></ol>
+    </div>
 
     <script src="../script/index.js"></script>
 </body>
