@@ -206,3 +206,30 @@ function todoList(){
 
 add_task.addEventListener('click', todoList)
 
+
+
+function calculator(operator){
+    let n1 = parseFloat(document.getElementById('num1').value)
+    let n2 = parseFloat(document.getElementById('num2').value)
+    let result = 0
+
+    if(n1 === "" || n2 === ""){
+        alert("Write something")
+    }
+    if(NaN(n1) || NaN(n2)){
+        alert('Please enter a valid number')
+    }
+
+    if(operator === '+') result = n1 + n2
+    else if(operator === '-') result = n1 - n2
+
+    else "Enter a valid operator"
+
+    document.getElementById('display').innerText = result
+
+}
+
+let x = () => ('Hello functions')
+
+
+console.log(test())

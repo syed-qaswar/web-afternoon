@@ -1,0 +1,15 @@
+/* *{margin: 0; padding: 0; box-sizing: border-box;} */
+
+.navbar{
+    background-color: rgba(68, 195, 249, 0.826);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+
+.card-container{
+    display: flex;
+    justify-content: space-evenly;
+}
