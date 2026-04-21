@@ -1,6 +1,6 @@
-function Card({img, title, desc}){
+function Card({img, title, desc, style}){
     return(
-        <div className="border-2 border-amber-300">
+        <div className={style}>
             <img src={img} alt="" />
             <div className="p-2">
                 <h2 className="font-bold text-2xl">{title}</h2>

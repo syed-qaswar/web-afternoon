@@ -5,9 +5,9 @@ import Card from "./components/Card";
 import { useState } from "react";
 
 const courses = [
-  {title: 'Web Development', desc: 'Learn WEB tips and tricks'},
-  {title: 'SEO', desc: 'Learn SEO tips and tricks'},
-  {title: 'Cyber Security', desc: 'Learn Cyber security'}
+  {title: 'Web Development', desc: 'Learn WEB tips and tricks', style: 'border-2 border-amber-300'},
+  {title: 'SEO', desc: 'Learn SEO tips and tricks', style: 'border-2 border-blue-300'},
+  {title: 'Cyber Security', desc: 'Learn Cyber security', style: 'border-2 border-purple-300'}
 ]
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
 
       <div className="card-container">
         {courses.map((course) => (
-          <Card title={course.title} desc={course.desc} img='/hero.png'/>
+          <Card title={course.title} desc={course.desc} img='/hero.png' style={course.style}/>
         ))}
       </div>
     </>
