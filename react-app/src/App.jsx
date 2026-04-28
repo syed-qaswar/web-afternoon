@@ -3,6 +3,9 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Card from "./components/Card";
 import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./routes/Home";
+import About from "./routes/About";
 
 const courses = [
   {title: 'Web Development', desc: 'Learn WEB tips and tricks', style: 'border-2 border-amber-300'},
@@ -14,10 +17,18 @@ function App() {
   const [count, setCount] = useState(1)
   // togglevisibility
   const [isVisible, setVisibility] = useState(false)
-
   return (
     <>
-      <Navbar />
+      <BrowserRouter>
+            <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </BrowserRouter>
+
+
+
       <Hero />
       <button className="bg-blue-600 p-2 rounded" onClick={() => setCount(count + 1)}>Count: {count}</button>
 
